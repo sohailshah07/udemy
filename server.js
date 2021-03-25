@@ -1,9 +1,9 @@
-const express = require('express');
- 
-const app = express();
+const http = require('http');
 
-
-
-app.listen(3000, ()=> {
-    console.log('listening on 3000 ');
-})
+const server = http.createServer((req, res)=>{
+    console.log(req);
+    // process.exit();
+});
+server.listen(3000, ()=>{
+    console.log('server up and running')
+});
